@@ -1,6 +1,7 @@
 import React from "react";
-import Input from "./input.jsx";
-import useForm from "../../hooks/useForm.jsx";
+import Input from "./Input.jsx";
+import useForm from "../hooks/useForm.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const nome = useForm("nome");
@@ -15,6 +16,8 @@ const Form = () => {
 
   const [carregando, setCarregando] = React.useState(false);
   const dialogRef = React.useRef(null);
+
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -34,8 +37,10 @@ const Form = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(form),
+          body: JSON.stringify(Form),
         });
+
+        navigate("/Home");
       } catch (err) {
         console.error("Erro ao enviar formulário:", err);
       } finally {
