@@ -6,6 +6,7 @@ import Footer from "./Footer.jsx";
 import Produtos from "./Produtos.jsx";
 import Contato from "./Contato.jsx";
 import Pagina404 from "./Pagina404.jsx";
+import Produto from "./Produto.jsx";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
         <div className="content">
           <Routes>
             <Route path="/produtos" end element={<Produtos />} />
+            <Route path="produto/:id" end element={<Produto />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/carrinho" end element={<Carrinho />} />
             <Route path="*" element={<Pagina404 />} />
           </Routes>
         </div>
