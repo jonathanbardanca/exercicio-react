@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/Contato.module.css';
 import foto from '../../img/contato.jpg';
-import Head from 'Head.jsx';
+import Head from './Head.jsx';
 
 export const Contato = () => {
   return (

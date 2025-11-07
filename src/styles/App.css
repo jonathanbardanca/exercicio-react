@@ -30,7 +30,7 @@ h1 {
 
 .loading {
   width: 20px;
-  height: 20px;
+  height: 20px; 
   border-radius: 50%;
   border: 10px solid #ccc;
   border-right-color: transparent;

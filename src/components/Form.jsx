@@ -2,6 +2,7 @@ import React from "react";
 import Input from "./Input.jsx";
 import useForm from "../hooks/useForm.jsx";
 import { useNavigate } from "react-router-dom";
+import styles from "../styles/Form.module.css";
 
 const Form = () => {
   const nome = useForm("nome");
@@ -59,7 +60,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <Input label="Nome" id="nome" type="text" {...nome} />
 
         <Input

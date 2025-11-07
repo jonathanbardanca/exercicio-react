@@ -1,0 +1,60 @@
+.form {
+  max-width: 450px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: solid 1px #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form textarea {
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  background: #eee;
+  transition: 0.2s;
+  margin: 0; /* espaçamento controlado pelo gap do .form */
+  box-sizing: border-box;
+}
+
+.form input[type='text']:focus,
+.form input[type='email']:focus,
+.form input[type='password']:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #19f;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(173, 223, 255, 0.5);
+}

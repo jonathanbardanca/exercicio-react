@@ -19,13 +19,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Form from "./components/Form.jsx";
 import Home from "./components/Home.jsx";
 import Pagina404 from "./components/Pagina404.jsx";
+import './styles/App.css';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Form />} />
-        <Route path="Home" element={<Home />} />
+        <Route path="Home/*" element={<Home />} />
         <Route path="*" element={<Pagina404 />} />
       </Routes>
     </BrowserRouter>

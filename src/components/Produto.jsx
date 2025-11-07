@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Produto.module.css";
 import { useParams } from "react-router-dom";
-import Head from "Head.jsx";
+import Head from "./Head.jsx";
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -35,7 +35,7 @@ const Produto = () => {
       <Head title={`produto | ${produto.nome}`} description={`Página do produto | ${produto.nome}`} />
 
       <div>
-        {produto.foto.map(foto => <img key={foto.src} src={foto.src} alt={foto.titulo} />)}
+        {produto.fotos.map(foto => <img key={foto.src} src={foto.src} alt={foto.titulo} />)}
       </div>
       <div>
         <h1>{produto.nome}</h1>
