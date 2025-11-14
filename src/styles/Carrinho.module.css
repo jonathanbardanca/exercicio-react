@@ -164,8 +164,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 30px;
-  height: 30px;
+  min-width: 25px;
+  height: 25px;
 }
 
 .btnSub:hover, .btnAdd:hover {
