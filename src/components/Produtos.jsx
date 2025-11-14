@@ -3,7 +3,7 @@ import Head from './Head.jsx';
 import styles from '../styles/Produtos.module.css';
 import { Link } from 'react-router-dom';
 
-export const Produtos = () => {
+export const Produtos = ({ addToCart }) => {
   const [produtos, setProdutos] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -31,7 +31,16 @@ export const Produtos = () => {
       {produtos.map((produto) => (
         <Link to={`/Home/produto/${produto.id}`} key={produto.id}>
           <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
-          <h1 className={styles.nome}>{produto.nome}</h1>
+          <div className={styles.conteiner}>
+            <h1 className={styles.nome}>{produto.nome}</h1>
+            <span 
+              className={styles.btnComprar} 
+              onClick={(e) => addToCart(e, produto)}
+              role="button"
+            >
+              +
+            </span>
+          </div>
         </Link>
       ))}
     </section>

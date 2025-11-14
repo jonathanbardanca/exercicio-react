@@ -11,6 +11,10 @@
   gap: 1rem;
 }
 
+.header ul {
+  align-items: center;
+}
+
 .link {
   text-decoration: none;
   color: black;
@@ -27,4 +31,21 @@
 
 .link:global(.active) {
   background: #ddd;
+}
+
+.header button {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: #eee;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+}
+
+.header ul li {
+  display: flex;
+  align-items: center;
 }

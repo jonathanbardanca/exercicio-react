@@ -3,7 +3,7 @@ import styles from "../styles/Produto.module.css";
 import { useParams } from "react-router-dom";
 import Head from "./Head.jsx";
 
-const Produto = () => {
+const Produto = ({ addToCart }) => {
   const [produto, setProduto] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
@@ -41,6 +41,13 @@ const Produto = () => {
         <h1>{produto.nome}</h1>
         <span className={styles.preco}>R$ {produto.preco}</span>
         <p className={styles.descricao}>{produto.descricao}</p>
+        <span 
+          className={styles.btnComprar}
+          onClick={(e) => addToCart(e, produto)}
+          role="button"
+        >
+          Adicionar no carrinho
+        </span>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 
-export const Header = () => {
+export const Header = ({ setCartOpen }) => {
   return (
     <nav className={styles.header}>
       <ul>
@@ -12,9 +12,7 @@ export const Header = () => {
         <li>
           <NavLink className={styles.link} to="/Home/contato">Contato</NavLink>
         </li>
-        <li>
-          <NavLink className={styles.link} to="/Home/carrinho">Carrinho</NavLink>
-        </li>
+        <button onClick={() => setCartOpen(true)}>Carrinho</button>
       </ul>
     </nav>
   );

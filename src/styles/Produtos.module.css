@@ -7,3 +7,32 @@
 .nome {
   margin: 0.5rem 0;
 }
+
+.conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnComprar {
+  width: 30px;
+  height: 30px;
+  background: #1624e0;
+  color: white;
+  font-size: 20px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.btnComprar:hover,
+.btnComprar:focus {
+  background: #1f2ded;
+  box-shadow: 0 0 0 2px var(--color-light), 0 0 0 3px var(--color);
+  outline: none;
+}
+
+.btnComprar:active {
+  box-shadow: 0 0 0 2px var(--color), 0 0 0 3px var(--color);
+}
