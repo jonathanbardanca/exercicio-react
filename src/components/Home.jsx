@@ -14,6 +14,21 @@ const Home = () => {
   const [cartItems, setCartItems] = React.useState([]);
   const [cartOpen, setCartOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    const savedCart = localStorage.getItem("cartItems");
+    if (savedCart) {
+      setCartItems(JSON.parse(savedCart));
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (cartItems.length === 0) {
+      localStorage.removeItem("cartItems");
+    } else {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+  }, [cartItems]);
+
   function addToCart(e, produto) {
     e.preventDefault();
     e.stopPropagation();
