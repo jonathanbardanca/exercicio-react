@@ -94,6 +94,13 @@ const Form = () => {
         <button type="submit">Enviar</button>
       </form>
 
+      <span className={styles.Span}>
+        <p>
+          Para entrar direto para a home clique aqui
+          <button type="button" onClick={() => navigate('/Home')}>ENTRAR</button>
+        </p>
+      </span>
+
       <dialog ref={dialogRef} style={{ border: "none", padding: "1rem" }}>
         <p>Formulário enviado com sucesso!</p>
       </dialog>

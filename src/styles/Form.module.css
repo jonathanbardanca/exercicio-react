@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
 .form button {
@@ -57,4 +58,25 @@
   border-color: #19f;
   background: white;
   box-shadow: 0 0 0 3px rgba(173, 223, 255, 0.5);
+}
+
+.Span {
+  border: 1px solid #ccc;
+  width: 250px;
+  position: absolute;
+  top: 200px;
+  left: 1050px;
+  padding: 10px;
+}
+
+.Span button {
+  margin: 1rem 0 0 0.5rem;
+  padding: 0.6rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
